@@ -46,8 +46,13 @@
 
 #endif
 
+#ifdef WIN32_ALTERNATE_INCLUDES
+#include "../win32/config.h"
+#include "../win32/libnet.h"
+#else
 #include "../include/config.h"
 #include "../include/libnet.h"
+#endif
 
 /* IPPROTO_ and sockaddr_ definitions are here. They are often
  * implicitly pulled in, but some systems need them explicitly
