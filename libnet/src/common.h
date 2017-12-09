@@ -46,7 +46,7 @@
 
 #endif
 
-#ifdef WIN32_ALTERNATE_INCLUDES
+#if defined(_WIN32) && defined(WIN32_ALTERNATE_INCLUDES)
 #include "../win32/config.h"
 #include "../win32/libnet.h"
 #else
